@@ -1,4 +1,0 @@
-install:make dep
-sudo:enabled
-language: c
-script: make test
