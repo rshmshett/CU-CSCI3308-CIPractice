@@ -1,6 +1,5 @@
-install: make get-deps
 language: c
-script: make test
+script: make all
 compiler:
   - clang
   - gcc
