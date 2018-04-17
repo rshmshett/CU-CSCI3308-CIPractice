@@ -1,5 +1,4 @@
+install:make dep
 language: c
-script: make all
-compiler:
-  - clang
-  - gcc
+script: make test
+
