@@ -11,7 +11,6 @@ PKG_CHECK_LIBS = `pkg-config --libs check`
 
 .PHONY: all dep clean test
 
-test:./geometry_test
 
 all: geometry_test
 
@@ -20,6 +19,10 @@ geometry_test: geometry_test.o geometry.o
 
 geometry_test.o: geometry_test.c geometry.h
 	$(CC) $(CFLAGS) $< -o $@
+
+test: geometry_test
+	./geometry_test
+
 
 geometry.o: geometry.c geometry.h
 	$(CC) $(CFLAGS) $< -o $@
